@@ -1,3 +1,9 @@
+
+# 문제. 
+# 결과화면
+![결과화면](./resultScreen.png)
+
+[출처] 마크다운에서 이미지 넣기|작성자 천동이
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
