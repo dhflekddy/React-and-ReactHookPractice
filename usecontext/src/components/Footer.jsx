@@ -1,7 +1,10 @@
 
 import React from "react";
-const Footer=({isDark,setIsDark})=>{
-
+import { ThemeContext} from "../Context/ThemeContext";
+import { useContext } from "react";
+//마찬가지로 useContext를 사용할 것이므로 props를 모두 삭제
+const Footer=()=>{
+    const {isDark, setIsDark}=useContext(ThemeContext);
     const toggleTheme=()=>{
         setIsDark(!isDark);
     };
