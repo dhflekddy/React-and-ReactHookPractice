@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{memo} from 'react';
 const Child=({childAge, childName})=>{
     console.log("자녀 컴포넌트도 랜더링이 되었네요");
     return (
@@ -9,4 +9,4 @@ const Child=({childAge, childName})=>{
         </div>
     );
 };
-export default Child;
+export default memo(Child);
