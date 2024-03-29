@@ -1,9 +1,9 @@
 
-# 문제. 
+# 문제. Dark Mode버튼을 누르면 아래그림과 같이 화면의 배경색이 바뀌는 화면을 구성하세요. 
+# 1. useContext사용하지 않고 props만을 이용해 구현한 버전과 useContext사용한 버전 비교하기
 # 결과화면
 ![결과화면](./resultScreen.png)
 
-[출처] 마크다운에서 이미지 넣기|작성자 천동이
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
