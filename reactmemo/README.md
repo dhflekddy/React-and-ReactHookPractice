@@ -1,3 +1,6 @@
+Q. 처음 버전으로 실행했을때 부모나이 증가 버튼만 눌렀음에도 불구 하고 자식 컴포넌트까지 랜더링되는 것을 확인할 수 있다. 즉 자식에게 전달한 props의 변화가 없음에도 리엑트의 특성(특성이라고 뭉뜽그려 말했지만 부모가 랜더링되면 자식도 따라서 랜더링되는 것은 당연하다. 왜냐하면 부모코드에는 반드시 자식컴포넌트가 있을 것이고 랜더링한다는 것은 컴포넌트안의 모든 코드를 다시 검색한다는 것을 의미하기 때문이다. )때문에 자식 컴포넌트도 함께 랜더링되는 것이다. 이는 자식으로 전달한 props가 변경되었을 때만 랜더링 되었으면 하는 기대를 무너뜨리는 것이다. 이러한 현상을 자식으로 건낸 props가 변경되었을때만 랜더링될 수 있게, React.memo를 사용하여 개선할 수 있다. 
+![결과이미지](./result.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
