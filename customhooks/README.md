@@ -1,5 +1,9 @@
 # Custom Hook! Let's make useInput
 ![result](./result.jpg)
+
+![result2](./result2.jpg)
+# 테스트를 위한 무료 가짜 API를 제공해 주는 사이트: https://jsonplaceholder.typicode.com/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

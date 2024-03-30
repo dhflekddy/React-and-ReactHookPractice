@@ -1,35 +1,33 @@
-// import { useRef } from "react";
-// import { useState } from "react";
-import useInput from "./useInput";
+import { useState } from "react";
+import { useEffect } from "react";
 
-const displayMessage=(message)=>{
-  alert(message);
-}
+const baseUrl='https://jsonplaceholder.typicode.com';
+
 const App=()=>{
-    //아래 4개의 상태, 함수를 커스텀 훅으로 묶어보고자한다
-  // const [inputValue,setInputValue]=useState('');
+  
+  //아래 네트워크를 통해 데이터를 fetch해 오는 과정(return 문전까지)을 custom훅을 사용해 하나의 useFetch(커스텀 훅)로 만들어 보자 
+  const[data, setData]=useState(null);
 
-  // const inputHandler=(e)=>{
-  //   setInputValue(e.target.value);
-  // }
+  const fetchUrl=(type)=>{
+    fetch(baseUrl+'/'+type).then(result=>result.json()).then(result=>setData(result));
+  }
+  useEffect(()=>{
+    // fetch('https://jsonplaceholder.typicode.com/posts').
+    // then(result => result.json()).
+    // then(result =>console.log(result));
+    fetchUrl('users');
+  },[]);
 
-  // const buttonHandler=()=>{
-  //   alert(inputValue);
-  //   setInputValue('');
-  //   ref.current.focus();
-  // }
-  // const ref=useRef();
-
-  //useInput이라는 커스텀 훅 안의 내용을 모르면 온전히 코드를 해석할 수 없다. 리엑트에서는 그렇다...
-  const[inputValue, inputHandler,ref, buttonHandler]= useInput("HiRoo", displayMessage);
   return(
     <div>
-      <h2>useInput</h2>
-      <input value={inputValue} onChange={inputHandler} ref={ref}></input>
-      <button onClick={buttonHandler}>확인</button>
-    </div>
+      <h2>useFetch</h2>
+      <button onClick={()=>fetchUrl('users')}>users</button>
+      <button onClick={()=>fetchUrl('posts')}>posts</button> 
+      <button onClick={()=>fetchUrl('photos')}>photos</button>
 
+      <pre>{JSON.stringify(data,null, 1)}</pre>
+    </div>
   );
-  
 };
+
 export default App;
