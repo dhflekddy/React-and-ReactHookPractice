@@ -1,3 +1,4 @@
+# 커스텀훅에서 중요한건 2가지다. 커스텀 훅 파일에서 쓸 데이터를 인자로 받아 오고 커스텀 훅을 쓸 파일에서 사용할 변수, 함수를 커스텀 훅의 return문 안에 넣어 주는 것이다. 
 # Custom Hook! Let's make useInput
 ![result](./result.jpg)
 
