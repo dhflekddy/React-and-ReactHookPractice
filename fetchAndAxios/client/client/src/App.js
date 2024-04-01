@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import axios from 'axios';
 const baseUrl='http://localhost:4000';
 
 const App=()=>{
   const [todoList, setData]=useState([]);
+  const ref=useRef();
   // const [text, setText]=useState('');
 
 
@@ -32,6 +33,8 @@ const App=()=>{
     e.preventDefault();//생략시 GET 요청(request)으로 진행되며(default) 이에따라 주소창의 url이 바뀌는 것을 확인할 수 있다^^
     const text=e.target.text.value;
     const done=e.target.done.checked;
+    e.target.text.value="";
+    ref.current.focus();
     // fetch(baseUrl+'/api/todo',{
     //   //fetch API를 사용하여 데이터를 post할때는 반드시 아래와 같이 method, headers, body를 추가해 주어야 한다. 
     // method:'POST',//소문자도 가능
@@ -59,7 +62,7 @@ const App=()=>{
       <form onSubmit={onSubmitHandler}>
         {/* 아래와 같이 input태그의 속성을 주지 않아도 다다음 줄에서 한것처럼 input태그의 value를 취할 수 있다. */}
         {/* <input name='text' value={text} onChange={inputHnadler}></input> */}
-        <input name='text'></input>
+        <input name='text' ref={ref}></input>
         <input name='done' type="checkbox"></input>
         <input type="submit" value='추가'></input>
       </form>
