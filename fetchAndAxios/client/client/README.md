@@ -1,3 +1,6 @@
+# fetch API를 axios라이브러리를 사용하여 바꾸는 것은 정말 간단하다. npm install axios로 라이브러리 받아준다. import axios from 'axios' .  fetch가 들어간 자리를 axios로 바꾸어 주기(만약 코드가 지저분해 진다면 async, await문법을 사용해 주면됨)
+
+이렇게 데이터를 가져오고 post하는 코드를 하나의 custom hook으로 뺄 수 있습니다. 이렇게 하면 나만의 훅이 되지만 이런 유용한 custom hooks들을 한데 모아놓은 라이브러리가 있는데 이것이 react-query입니다. react-query를 사용하면 더 쉽게 데이터를 가지고 올수 있습니다. 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
