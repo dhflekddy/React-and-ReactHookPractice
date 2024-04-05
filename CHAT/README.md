@@ -1,0 +1,1 @@
+### 다른 파일은 볼것 없고 app.js, src파일 안의 chat.js, index.html만 보면됨
